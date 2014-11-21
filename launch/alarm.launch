@@ -1,0 +1,12 @@
+<launch>
+
+  <node pkg="alarm" type="alarm" name="emergency_alarm_node" output="screen">
+
+    <param name="tolerance" value="1500" type="int" />
+    <param name="status_publish_frequency" value="0.5" />
+    <param name="actions" value="/home/user/waterinmonitor/init/waterinactions.sh" />
+    <remap from ="humidity" to = "/motor_board/humidity"/>
+
+  </node>
+
+</launch>
